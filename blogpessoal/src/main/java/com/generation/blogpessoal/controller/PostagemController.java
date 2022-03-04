@@ -59,9 +59,9 @@ public class PostagemController {
 		return ResponseEntity.ok(postagemRepository.findAllByTituloContainingIgnoreCase(titulo));
 	}
 	
-	 @PostMapping
+	 @PostMapping()
 	 public ResponseEntity<Postagem> create(@RequestBody @Valid Postagem postagem) {
-		 		Optional<Tema> optionalTema = temaRepository.findById(postagem.getTema().getId());
+		 		Optional<Tema> optionalTema = temaRepository.findById(postagem.getTema().getId());//Star Wars - id = 1 ;"tema" :{id: 1}// null // True Or False
 	
 	        if (!optionalTema.isPresent()) {
 	            return ResponseEntity.badRequest().build();
