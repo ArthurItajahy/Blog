@@ -28,12 +28,10 @@ import com.generation.blogpessoal.repository.TemaRepository;
 @RequestMapping("/temas")
 @CrossOrigin(origins = "*",allowedHeaders="*")
 public class TemaController {
-	private PostagemRepository postagemRepository;
 	private TemaRepository temaRepository;
 	
 	@Autowired 
 	public TemaController(PostagemRepository postagemRepository, TemaRepository temaRepository){
-		this.postagemRepository = postagemRepository;
 		this.temaRepository = temaRepository;
 	}
 	@GetMapping
