@@ -2,12 +2,10 @@ package com.generation.blogpessoal.controller;
 
 import java.net.URI;
 import java.util.List;
-import java.util.Optional;
 
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -58,25 +56,15 @@ public class TemaController {
         return ResponseEntity.created(location).body(savedTema);
     }
 	
-    @PutMapping("/{id}")
-    public ResponseEntity<Tema> update(@PathVariable Long id, @Valid @RequestBody Tema tema) {
-        Optional<Tema> optionalTema = temaRepository.findById(id);
-        if (!optionalTema.isPresent()) {
-            return ResponseEntity.unprocessableEntity().build();
-        }
-
-        tema.setId(optionalTema.get().getId());
-        temaRepository.save(tema);
-
-        return ResponseEntity.noContent().build();
-    }
-	@DeleteMapping(path = "/{id}")
-	public  ResponseEntity<?> deletePostagem(@PathVariable Long id) {
-		return temaRepository.findById(id).map(record -> {
-			temaRepository.deleteById(id);
-			return ResponseEntity.status(HttpStatus.OK).build();
-		}).orElse(ResponseEntity.notFound().build());
-		
+    @PutMapping
+	public ResponseEntity <Tema> put (@RequestBody Tema tema){
+		return ResponseEntity.ok(temaRepository.save(tema));
 	}
+	
+	@DeleteMapping ("/{id}")
+	public void delete (@PathVariable long id) {
+		temaRepository.deleteById(id);
+	}
+ 
 	
 }

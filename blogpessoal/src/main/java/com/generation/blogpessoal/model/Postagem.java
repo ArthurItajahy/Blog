@@ -40,7 +40,7 @@ public class Postagem {
 	@UpdateTimestamp
 	private LocalDateTime data;
 	
-	@ManyToOne(fetch = FetchType.EAGER, optional = true)
+	@ManyToOne(fetch = FetchType.LAZY, optional = true)
 	@JoinColumn(name = "tema_id")
 	@JsonIgnoreProperties("postagem")
 	private Tema tema;
