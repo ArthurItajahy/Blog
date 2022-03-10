@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="UsuarioControllerTest" project="blogpessoal" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="com.generation.blogpessoal.controller.UsuarioControllerTest" time="2.485" displayname="UsuarioControllerTest" uniqueid="[engine:junit-jupiter]/[class:com.generation.blogpessoal.controller.UsuarioControllerTest]">
-    <testcase name="deveCriarUmUsuario" classname="com.generation.blogpessoal.controller.UsuarioControllerTest" time="1.306" displayname="Cadastrar Um Usuário" uniqueid="[engine:junit-jupiter]/[class:com.generation.blogpessoal.controller.UsuarioControllerTest]/[method:deveCriarUmUsuario()]"/>
-    <testcase name="naoDeveDuplicarUsuario" classname="com.generation.blogpessoal.controller.UsuarioControllerTest" time="0.19" displayname="Não deve permitir duplicação do Usuário" uniqueid="[engine:junit-jupiter]/[class:com.generation.blogpessoal.controller.UsuarioControllerTest]/[method:naoDeveDuplicarUsuario()]"/>
-    <testcase name="deveAtualizarUmUsuario" classname="com.generation.blogpessoal.controller.UsuarioControllerTest" time="0.576" displayname="Atualizar um Usuário" uniqueid="[engine:junit-jupiter]/[class:com.generation.blogpessoal.controller.UsuarioControllerTest]/[method:deveAtualizarUmUsuario()]"/>
-    <testcase name="deveMostrarTodosUsuarios" classname="com.generation.blogpessoal.controller.UsuarioControllerTest" time="0.411" displayname="Listar todos os Usuários" uniqueid="[engine:junit-jupiter]/[class:com.generation.blogpessoal.controller.UsuarioControllerTest]/[method:deveMostrarTodosUsuarios()]"/>
-  </testsuite>
-</testrun>
